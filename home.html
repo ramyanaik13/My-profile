@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Bio-data</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #00000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      background-size: 300% 300%;
+      animation: gradientShift 12s ease infinite;
+    }
+
+    /* Animated Background */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 100;
+    }
+    nav a {
+      color: #fffffffa;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      position: relative;
+      transition: color 0.3s;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: #ffd166;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a:hover {
+      color: #ffd166;
+    }
+
+    /* Welcome Card */
+    .welcome {
+      margin-top: 7rem;
+      max-width: 650px;
+      padding: 2.5rem;
+      border-radius: 20px;
+      background: rgba(244, 242, 242, 0.992);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 30px rgba(245, 242, 242, 0.991);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .welcome h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: lab(27.98% 62.9 -83.51 / 0.819);
+    }
+
+    .welcome p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin: 0.8rem 0;
+      color: #2f12eae6;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #2806be3b, #22a24d6e);
+      color: #ffffffe1;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav a {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+      }
+      .welcome {
+        margin: 6rem 1rem;
+        padding: 1.5rem;
+      }
+      .welcome h1 {
+        font-size: 2rem;
+      }
+      .welcome p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a>
+  </nav>
+
+  <section class="welcome">
+    <h1>🌸 Welcome!</h1>
+    <p>Hi, I'm <b>Ramya Naik</b>.</p>
+    <p>Explore my bio-data and resume to know more about me.</p>
+    <p>Thanks for visiting 💫</p>
+    <a href="index.html" class="btn">View My Resume</a>
+        <a href="biodata.html" class="btn">View My Biodata</a>
+
+  </section>
+</body>
+</html>
